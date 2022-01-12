@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandText">
+        <attr name="show_width" format="dimension" />//文字宽度，用于测量行数
+        <attr name="default_open" format="boolean" />//默认是否打开
+        <attr name="close_end_text" format="string" />//关闭状态尾部文字，默认为“展开全文”
+        <attr name="close_end_text_color" format="color" />//关闭状态尾部文字颜色
+        <attr name="open_end_text" format="string" />//打开状态尾部文字，默认为“收起”
+        <attr name="open_end_text_color" format="color" />//打开状态尾部文字颜色
+        <attr name="ellipse_text" format="string" />//省略号，默认为“
+        <attr name="allow_anim" format="boolean" />//是否需要展开收起动画
+        <attr name="anim_during" format="integer" />//动画时长
+        <attr name="limit_line" format="integer" />//收起状态行数
+        <attr name="close_end_drawable" format="reference" />
+        <attr name="open_end_drawable" format="reference" />
+    </declare-styleable>
+</resources>
