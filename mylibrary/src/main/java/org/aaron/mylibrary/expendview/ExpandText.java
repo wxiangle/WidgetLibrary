@@ -1,4 +1,4 @@
-package org.aaron.mylibrary;
+package org.aaron.mylibrary.expendview;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -25,9 +25,9 @@ import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 
-import cc.topop.gacha.common.utils.LxDensityUtil;
-
 import static android.text.Spanned.SPAN_INCLUSIVE_EXCLUSIVE;
+
+import org.aaron.mylibrary.R;
 
 /**
  * Created by wangxl1 on 1/12/22 11:13

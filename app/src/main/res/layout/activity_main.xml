@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <org.aaron.mylibrary.ExpandText
+        <org.aaron.mylibrary.expendview.ExpandText
             android:id="@+id/scroll_expand_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
