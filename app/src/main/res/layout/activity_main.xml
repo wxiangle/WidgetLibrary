@@ -10,27 +10,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <org.aaron.mylibrary.expendview.ExpandText
-            android:id="@+id/scroll_expand_text_view"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:overScrollMode="always"
-            android:scrollbarStyle="outsideInset"
-            android:scrollbars="vertical"
-            android:textSize="18sp"
-            app:allow_anim="true"
-            app:anim_during="400"
-            app:close_end_drawable="@mipmap/test_icon_spand_down"
-            app:close_end_text="展开全文"
-            app:close_end_text_color="#FF0000"
-            app:default_open="false"
-            app:ellipse_text="..."
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:limit_line="2"
-            app:open_end_drawable="@mipmap/test_icon_spand_up"
-            app:open_end_text="收起"
-            app:open_end_text_color="#FF0000" />
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="折叠TextView"
+                android:id="@+id/tv_expand_text"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="底部裁剪View"
+                android:id="@+id/tv_gap_view"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CardView Demo"
+                android:id="@+id/tv_card_view"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ShadowView Demo"
+                android:id="@+id/tv_shadow_view"/>
+
+
+        </LinearLayout>
 
     </ScrollView>
 

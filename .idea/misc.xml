@@ -5,6 +5,10 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1648148148148148" />
         <entry key="app/src/main/res/layout/activity_bottom_gap_view_text.xml" value="0.442481884057971" />
+        <entry key="app/src/main/res/layout/activity_card_view_test.xml" value="0.4171875" />
+        <entry key="app/src/main/res/layout/activity_expand_text_test.xml" value="0.4171875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.20288753799392098" />
+        <entry key="app/src/main/res/layout/activity_shadow_view_test.xml" value="0.4171875" />
       </map>
     </option>
   </component>

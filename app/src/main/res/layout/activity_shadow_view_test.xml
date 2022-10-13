@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.lihang.ShadowLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius_rightBottom="12dp"
+        app:hl_cornerRadius_leftBottom="12dp"
+        app:hl_shadowOffsetX="0dp"
+        app:hl_shadowOffsetY="0dp"
+        app:hl_shadowColor="@color/black"
+        app:hl_shadowHiddenRight="true"
+        app:hl_shadowHiddenLeft="true"
+        app:hl_shadowHiddenTop="true"
+        app:hl_shadowLimit="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="完全圆形圆角"
+            android:textColor="#000" />
+
+    </com.lihang.ShadowLayout>
+
+</FrameLayout>
