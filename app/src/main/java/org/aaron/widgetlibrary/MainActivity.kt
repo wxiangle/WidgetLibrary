@@ -27,5 +27,9 @@ class MainActivity : AppCompatActivity() {
         tv_shadow_view?.setOnClickListener {
             startActivity(Intent(this,ShadowViewTestActivity::class.java))
         }
+
+        tv_fresco_view?.setOnClickListener {
+            startActivity(Intent(this,FrescoActivity::class.java))
+        }
     }
 }

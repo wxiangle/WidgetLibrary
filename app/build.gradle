@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
 }
-
+def fresco_version = "2.3.0"
 android {
     compileSdkVersion 31
     buildToolsVersion "31.0.0"
@@ -47,4 +47,14 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.github.lihangleo2:ShadowLayout:3.2.4'
 
+    implementation "com.facebook.fresco:fresco:$fresco_version"
+    // 支持 GIF 动图，需要添加
+    implementation "com.facebook.fresco:animated-gif:$fresco_version"
+
+    // 支持 WebP （静态图+动图），需要添加
+    implementation "com.facebook.fresco:animated-webp:$fresco_version"
+    implementation "com.facebook.fresco:webpsupport:$fresco_version"
+
+    // 仅支持 WebP 静态图，需要添加
+    implementation "com.facebook.fresco:webpsupport:$fresco_version"
 }
