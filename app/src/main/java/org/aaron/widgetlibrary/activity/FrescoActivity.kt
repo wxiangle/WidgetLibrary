@@ -1,10 +1,12 @@
-package org.aaron.widgetlibrary
+package org.aaron.widgetlibrary.activity
 
 import android.app.Activity
 import android.net.Uri
 import android.os.Bundle
 import com.facebook.drawee.backends.pipeline.Fresco
 import kotlinx.android.synthetic.main.activity_fresco.*
+import org.aaron.widgetlibrary.R
+import org.aaron.widgetlibrary.utils.Constants
 
 
 /**
@@ -18,19 +20,24 @@ class FrescoActivity : Activity() {
         setContentView(R.layout.activity_fresco)
 
         val uri: Uri =
-            Uri.parse("https://upload-images.jianshu.io/upload_images/5530180-cf7f0e7d16cd55ed.gif?imageMogr2/auto-orient/strip|imageView2/2/w/800/format/webp")
+            Uri.parse(Constants.url_android)
 
-        my_image_view.setImageURI(uri, null)
+        val controller = Fresco.newDraweeControllerBuilder()
+            .setUri(uri)
+            .setAutoPlayAnimations(true)
+            .build()
+        my_image_view.controller = controller
+//        my_image_view.setImageURI(uri, null)
 
 
 
         val uri2 =
-            Uri.parse("https://pic.wangxiangle.top/img/477991a34fe00025aa0bbfe0190a420b.webp")
-        val controller = Fresco.newDraweeControllerBuilder()
+            Uri.parse(Constants.url_gacha)
+        val controller2 = Fresco.newDraweeControllerBuilder()
             .setUri(uri2)
             .setAutoPlayAnimations(true)
             .build()
-        my_image_view2.setController(controller)
+        my_image_view2.setController(controller2)
 //        my_image_view2.setImageURI(uri2)
 
 

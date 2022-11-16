@@ -48,6 +48,13 @@
                 android:text="FRESCO Demo"
                 android:id="@+id/tv_fresco_view"/>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Glide Demo"
+                android:id="@+id/tv_glide_view"/>
+
+
         </LinearLayout>
 
     </ScrollView>

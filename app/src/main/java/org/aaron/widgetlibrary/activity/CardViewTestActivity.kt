@@ -1,7 +1,8 @@
-package org.aaron.widgetlibrary
+package org.aaron.widgetlibrary.activity
 
 import android.app.Activity
 import android.os.Bundle
+import org.aaron.widgetlibrary.R
 
 /**
  * Created by wangxl1 on 2022/10/10 16:32

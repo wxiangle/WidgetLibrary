@@ -1,9 +1,10 @@
-package org.aaron.widgetlibrary
+package org.aaron.widgetlibrary.activity
 
 import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_expand_text_test.*
+import org.aaron.widgetlibrary.R
 
 /**
  * Created by wangxl1 on 2022/10/10 16:35

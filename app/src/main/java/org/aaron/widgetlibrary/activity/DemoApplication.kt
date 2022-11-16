@@ -1,4 +1,4 @@
-package org.aaron.widgetlibrary
+package org.aaron.widgetlibrary.activity
 
 import android.app.Application
 import com.facebook.drawee.backends.pipeline.Fresco

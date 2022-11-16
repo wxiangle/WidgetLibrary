@@ -1,10 +1,10 @@
 package org.aaron.widgetlibrary
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import org.aaron.widgetlibrary.activity.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,11 +25,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         tv_shadow_view?.setOnClickListener {
-            startActivity(Intent(this,ShadowViewTestActivity::class.java))
+            startActivity(Intent(this, ShadowViewTestActivity::class.java))
         }
 
         tv_fresco_view?.setOnClickListener {
-            startActivity(Intent(this,FrescoActivity::class.java))
+            startActivity(Intent(this, FrescoActivity::class.java))
+        }
+
+        tv_glide_view?.setOnClickListener {
+            startActivity(Intent(this, GlideActivity::class.java))
         }
     }
 }

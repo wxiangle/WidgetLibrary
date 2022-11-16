@@ -1,8 +1,8 @@
-package org.aaron.widgetlibrary
+package org.aaron.widgetlibrary.activity
 
-import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import org.aaron.widgetlibrary.R
 
 /**
  * Created by wangxl1 on 2022/10/9 11:18
