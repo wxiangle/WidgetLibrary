@@ -54,6 +54,12 @@
                 android:text="Glide Demo"
                 android:id="@+id/tv_glide_view"/>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loop Scaling View (Center Anchor)"
+                android:id="@+id/btn_loop_scaling"/>
+
 
         </LinearLayout>
 

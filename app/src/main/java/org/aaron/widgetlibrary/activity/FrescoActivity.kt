@@ -4,8 +4,7 @@ import android.app.Activity
 import android.net.Uri
 import android.os.Bundle
 import com.facebook.drawee.backends.pipeline.Fresco
-import kotlinx.android.synthetic.main.activity_fresco.*
-import org.aaron.widgetlibrary.R
+import org.aaron.widgetlibrary.databinding.ActivityFrescoBinding
 import org.aaron.widgetlibrary.utils.Constants
 
 
@@ -17,7 +16,8 @@ class FrescoActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fresco)
+        val binding = ActivityFrescoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val uri: Uri =
             Uri.parse(Constants.url_android)
@@ -26,10 +26,7 @@ class FrescoActivity : Activity() {
             .setUri(uri)
             .setAutoPlayAnimations(true)
             .build()
-        my_image_view.controller = controller
-//        my_image_view.setImageURI(uri, null)
-
-
+        binding.myImageView.controller = controller
 
         val uri2 =
             Uri.parse(Constants.url_gacha)
@@ -37,9 +34,6 @@ class FrescoActivity : Activity() {
             .setUri(uri2)
             .setAutoPlayAnimations(true)
             .build()
-        my_image_view2.setController(controller2)
-//        my_image_view2.setImageURI(uri2)
-
-
+        binding.myImageView2.controller = controller2
     }
 }

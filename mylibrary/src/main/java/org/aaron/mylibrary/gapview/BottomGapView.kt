@@ -34,7 +34,7 @@ class BottomGapView(context: Context, attributeSet: AttributeSet) :
         }
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         if (layerType == View.LAYER_TYPE_HARDWARE) {
             super.onDraw(canvas)
             drawForHardware(canvas)
@@ -44,7 +44,7 @@ class BottomGapView(context: Context, attributeSet: AttributeSet) :
         }
     }
 
-    private fun drawForNotHardware(canvas: Canvas?) {
+    private fun drawForNotHardware(canvas: Canvas) {
         mPath.reset()
         val rectTop = height.toFloat() - mGapRadius / 2
         mPath.moveTo(0f, height.toFloat())
@@ -64,13 +64,13 @@ class BottomGapView(context: Context, attributeSet: AttributeSet) :
         mPath.close()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            canvas?.clipOutPath(mPath)
+            canvas.clipOutPath(mPath)
         } else {
-            canvas?.clipPath(mPath, Region.Op.DIFFERENCE)
+            canvas.clipPath(mPath, Region.Op.DIFFERENCE)
         }
     }
 
-    private fun drawForHardware(canvas: Canvas?) {
+    private fun drawForHardware(canvas: Canvas) {
         mPath.reset()
         val rectTop = height.toFloat() - mGapRadius / 2
         mPath.moveTo(0f, height.toFloat())
@@ -88,6 +88,6 @@ class BottomGapView(context: Context, attributeSet: AttributeSet) :
         mPath.arcTo(mRightArcRectF, -90f, 90f)
         mPath.lineTo(width.toFloat(), height.toFloat())
         mPath.close()
-        canvas?.drawPath(mPath, mPaint)
+        canvas.drawPath(mPath, mPaint)
     }
 }

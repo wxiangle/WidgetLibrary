@@ -17,7 +17,7 @@ class ShadowView(context: Context, attributeSet: AttributeSet) :
 
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
     }
 }

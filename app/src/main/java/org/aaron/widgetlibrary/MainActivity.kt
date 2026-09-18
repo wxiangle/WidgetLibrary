@@ -3,37 +3,48 @@ package org.aaron.widgetlibrary
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import org.aaron.widgetlibrary.activity.*
+import org.aaron.widgetlibrary.activity.BottomGapViewTestActivity
+import org.aaron.widgetlibrary.activity.CardViewTestActivity
+import org.aaron.widgetlibrary.activity.ExpandTextTestActivity
+import org.aaron.widgetlibrary.activity.FrescoActivity
+import org.aaron.widgetlibrary.activity.GlideActivity
+import org.aaron.widgetlibrary.activity.LoopScalingTestActivity
+import org.aaron.widgetlibrary.activity.ShadowViewTestActivity
+import org.aaron.widgetlibrary.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        tv_expand_text?.setOnClickListener {
+        binding.tvExpandText.setOnClickListener {
             startActivity(Intent(this, ExpandTextTestActivity::class.java))
         }
 
-        tv_gap_view?.setOnClickListener {
+        binding.tvGapView.setOnClickListener {
             startActivity(Intent(this, BottomGapViewTestActivity::class.java))
         }
 
-        tv_card_view?.setOnClickListener {
+        binding.tvCardView.setOnClickListener {
             startActivity(Intent(this, CardViewTestActivity::class.java))
         }
 
-        tv_shadow_view?.setOnClickListener {
+        binding.tvShadowView.setOnClickListener {
             startActivity(Intent(this, ShadowViewTestActivity::class.java))
         }
 
-        tv_fresco_view?.setOnClickListener {
+        binding.tvFrescoView.setOnClickListener {
             startActivity(Intent(this, FrescoActivity::class.java))
         }
 
-        tv_glide_view?.setOnClickListener {
+        binding.tvGlideView.setOnClickListener {
             startActivity(Intent(this, GlideActivity::class.java))
+        }
+
+        binding.btnLoopScaling.setOnClickListener {
+            startActivity(Intent(this, LoopScalingTestActivity::class.java))
         }
     }
 }

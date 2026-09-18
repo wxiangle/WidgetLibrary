@@ -25,7 +25,7 @@ class BottomGapView2(context: Context, attributeSet: AttributeSet) :
         typedArray.recycle()
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
 
         mPath.reset()
         val rectTop = height.toFloat() - mGapRadius / 2
@@ -46,9 +46,9 @@ class BottomGapView2(context: Context, attributeSet: AttributeSet) :
         mPath.close()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            canvas?.clipOutPath(mPath)
+            canvas.clipOutPath(mPath)
         }else{
-            canvas?.clipPath(mPath,Region.Op.DIFFERENCE)
+            canvas.clipPath(mPath,Region.Op.DIFFERENCE)
         }
         super.onDraw(canvas)
     }

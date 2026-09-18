@@ -3,8 +3,7 @@ package org.aaron.widgetlibrary.activity
 import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_expand_text_test.*
-import org.aaron.widgetlibrary.R
+import org.aaron.widgetlibrary.databinding.ActivityExpandTextTestBinding
 
 /**
  * Created by wangxl1 on 2022/10/10 16:35
@@ -14,10 +13,11 @@ class ExpandTextTestActivity: Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_expand_text_test)
+        val binding = ActivityExpandTextTestBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        scroll_expand_text_view?.setTextColor(Color.parseColor("#000000"))
-        scroll_expand_text_view?.setContent("天有不测风云，展开全文 收起 人有旦夕祸福。蜈蚣百足，行不及蛇；雄鸡两翼，飞不过鸦。马有千里之程，无骑不能自往；人有冲天之志，非运不能自通。\n" +
+        binding.scrollExpandTextView.setTextColor(Color.parseColor("#000000"))
+        binding.scrollExpandTextView.setContent("天有不测风云，展开全文 收起 人有旦夕祸福。蜈蚣百足，行不及蛇；雄鸡两翼，飞不过鸦。马有千里之程，无骑不能自往；人有冲天之志，非运不能自通。\n" +
                 "\n" +
                 " \n" +
                 "\n" +

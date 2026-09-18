@@ -2,8 +2,7 @@ package org.aaron.widgetlibrary.activity
 
 import android.app.Activity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_glide.*
-import org.aaron.widgetlibrary.R
+import org.aaron.widgetlibrary.databinding.ActivityGlideBinding
 import org.aaron.widgetlibrary.utils.Constants
 import org.aaron.widgetlibrary.utils.LoadImageUtils
 
@@ -15,10 +14,10 @@ class GlideActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_glide)
+        val binding = ActivityGlideBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        LoadImageUtils.loadImageView(my_image_view, Constants.url_android)
-        LoadImageUtils.loadImageView(my_image_view2, Constants.url_gacha)
-
+        LoadImageUtils.loadImageView(binding.myImageView, Constants.url_android)
+        LoadImageUtils.loadImageView(binding.myImageView2, Constants.url_gacha)
     }
 }

@@ -1,22 +1,20 @@
 plugins {
     id 'com.android.library'
-    id 'kotlin-android'
-    id 'com.github.dcendents.android-maven'
-    id 'kotlin-kapt'
+    id 'maven-publish'
 }
+
 group = 'com.github.wxiangle'
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
+    namespace 'org.aaron.mylibrary'
+    compileSdk 36
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 31
+        minSdk 21
         versionCode 2
         versionName "1.1"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -26,24 +24,40 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = '1.8'
+
+    publishing {
+        singleVariant("release")
     }
 }
 
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.6.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
+}
+
+// JitPack 发布：本模块以 com.github.wxiangle:mylibrary 的方式对外提供
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.wxiangle'
+                artifactId = 'mylibrary'
+                version = '1.1'
+            }
+        }
+    }
 }
